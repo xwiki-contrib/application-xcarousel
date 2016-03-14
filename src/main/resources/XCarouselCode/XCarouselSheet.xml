@@ -163,7 +163,7 @@
               #set ($itemClass = "item slide_${object.number}")
             #end
             &lt;div class="${itemClass}"&gt;
-              &lt;img src="$!{imageUrl}?height=$!{imageHeight}" alt=''&gt;
+              &lt;img src="$!{imageUrl}" alt="$!{object.getProperty('title').value}"&gt;
               &lt;div class="carousel-caption"&gt;
                 &lt;h3&gt;&lt;a #if("$!{linkURL}" != '')href="$!{linkURL}" #end&gt;$!{object.getProperty('title').value}&lt;/a&gt;&lt;/h3&gt;
                 &lt;p&gt;$!{object.getProperty('text').value}&lt;/p&gt;
@@ -890,7 +890,15 @@ colorPikerOn();</code>
     height: $carouselHeight;
     background-color: $carouselBGColor;
   }
-
+  #if("$!{carouselObj.getProperty('carouselWidth').value}" == '')
+    #set($carouselImageWidth = '100%')
+  #else 
+    #set($carouselImageWidth = ${carouselWidth})
+  #end
+  $carouselID .carousel-inner>.item>img, $carouselID .carousel-inner>.item>a>img {
+    width: ${carouselImageWidth};
+    height: ${carouselHeight};
+  }
   #foreach($slideObj in $slideObjects)
     #set($titleSize = $!{slideObj.getProperty('titleSize').value})
     #set($textSize = ${slideObj.getProperty('textSize').value})
