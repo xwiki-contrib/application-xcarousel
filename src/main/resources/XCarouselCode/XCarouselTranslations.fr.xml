@@ -63,8 +63,7 @@ xcarousel.helper_autoSliding=Glisseront automatiquement à un intervalle donné.
 xcarousel.helper_interval=Temps entre les diapositives automatique (AUTO-GLISSEMENT est activé), en millisecondes (par défaut 5000 ms).
 xcarousel.helper_width=Largeur du carousel en pixels (ex: 1000 px), si vous le laissez vide, il prendra toute la largeur du conteneur.
 xcarousel.helper_height=Hauteur du carousel en pixels (ex: 200 px), si on le laisse vide, il prendra la hauteur de l'image.
-xcarousel.helper_bgcolor=
-Cliquez sur le champs de saisie pour sélectionner la couleur. Vous pouvez également saisire votre code couleur dans le champs de saisie.
+xcarousel.helper_bgcolor=Cliquez sur le champs de saisie pour sélectionner la couleur. Vous pouvez également saisire votre code couleur dans le champs de saisie.
 
 # Live table generic keys
 xcarousel.livetable.doc.title=Titre de la page

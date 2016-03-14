@@ -566,21 +566,24 @@ colorPikerOn();</code>
   margin: 0;
   cursor: pointer;
 }
-
 #sectionAcordion .slidePara {
-  color: rgba(48, 69, 92, 0.8);
-  font-size: 17px;
-  line-height: 26px;
-  letter-spacing: 1px;
+  padding: 15px;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  margin:15px 0;
+  background: #FAFAFA;
   position: relative;
   overflow: hidden;
   max-height: 800px;
   opacity: 1;
   transform: translate(0, 0);
-  margin-top: 14px;
   z-index: 2;
 }
-
+.slidePara dt {
+  margin-top: 19px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
 #sectionAcordion .listOfSlides {
   list-style: none;
   perspective: 900;
@@ -595,7 +598,6 @@ colorPikerOn();</code>
   padding-top: 18px;
   border-bottom: 1px dotted #dce7eb;
 }
-
 #sectionAcordion .listOfSlides .slideSection input[type=checkbox] {
   position: absolute;
   cursor: pointer;
@@ -605,7 +607,8 @@ colorPikerOn();</code>
   opacity: 0;
 }
 #sectionAcordion .listOfSlides .slideSection input[type=checkbox]:checked ~ .slidePara {
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
@@ -1024,12 +1027,13 @@ colorPikerOn();</code>
 
 .color-preview{
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 2px;
+  left: 2px;
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 30px;
   vertical-align: text-top;
+  border-radius: 3px 0 0 3px;
 }
 
 .colpick{
@@ -1179,6 +1183,143 @@ colorPikerOn();</code>
     </property>
     <property>
       <parse/>
+    </property>
+    <property>
+      <use>currentPage</use>
+    </property>
+  </object>
+    <object>
+    <name>XCarouselCode.XCarouselSheet</name>
+    <number>4</number>
+    <className>XWiki.StyleSheetExtension</className>
+    <guid>d26f20b9-9dc6-4251-bb38-cfc58f74e8c9</guid>
+    <class>
+      <name>XWiki.StyleSheetExtension</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <contentType>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>contentType</name>
+        <number>6</number>
+        <prettyName>Content Type</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>CSS|LESS</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </contentType>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage|onDemand|always</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <property>
+      <cache>default</cache>
+    </property>
+    <property>
+      <code>#sectionAcordion{
+  .slidePara {
+    color: inherit;
+  }
+  .attachment-picker {
+    img {
+      padding: 0px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+  }
+  h2 {
+    color: @link-color;
+    background: none;
+  }
+}
+#caruselFormContainer .glyphicon.glyphicon-info-sign {
+  float: right;
+  color: @link-color;
+}
+.slideSection{ 
+  .dinamicArrow{
+    &amp;:before, &amp;:after {
+      background-color: @link-color;
+    }
+  }
+}</code>
+    </property>
+    <property>
+      <contentType>LESS</contentType>
+    </property>
+    <property>
+      <name>Flamingo adaptation</name>
+    </property>
+    <property>
+      <parse>1</parse>
     </property>
     <property>
       <use>currentPage</use>
