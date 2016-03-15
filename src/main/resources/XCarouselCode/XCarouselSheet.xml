@@ -163,7 +163,7 @@
               #set ($itemClass = "item slide_${object.number}")
             #end
             &lt;div class="${itemClass}"&gt;
-              &lt;img src="$!{imageUrl}" alt="$!{object.getProperty('title').value}"&gt;
+              &lt;img src="$!{imageUrl}" alt="$escapetool.xml($!{object.getProperty('title').value})"&gt;
               &lt;div class="carousel-caption"&gt;
                 &lt;h3&gt;&lt;a #if("$!{linkURL}" != '')href="$!{linkURL}" #end&gt;$!{object.getProperty('title').value}&lt;/a&gt;&lt;/h3&gt;
                 &lt;p&gt;$!{object.getProperty('text').value}&lt;/p&gt;
