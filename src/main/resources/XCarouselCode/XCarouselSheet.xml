@@ -890,6 +890,7 @@ colorPikerOn();</code>
   #set($carouselHeight = "$!{carouselObj.getProperty('carouselHeight').value}px")
 
   $carouselID{
+    margin: 0 auto;
     width: $carouselWidth;
     height: $carouselHeight;
     background-color: $carouselBGColor;
@@ -930,6 +931,7 @@ colorPikerOn();</code>
     }
     $carouselID .slide_${slideObj.number} .item-inner {
       display: table;
+      table-layout: fixed;
       width: 100%;
     }
     $carouselID .slide_${slideObj.number} .item-inner&gt;div {
