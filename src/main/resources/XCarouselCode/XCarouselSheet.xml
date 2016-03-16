@@ -163,10 +163,14 @@
               #set ($itemClass = "item slide_${object.number}")
             #end
             &lt;div class="${itemClass}"&gt;
-              &lt;img src="$!{imageUrl}?height=$!{imageHeight}" alt=''&gt;
-              &lt;div class="carousel-caption"&gt;
-                &lt;h3&gt;&lt;a #if("$!{linkURL}" != '')href="$!{linkURL}" #end&gt;$!{object.getProperty('title').value}&lt;/a&gt;&lt;/h3&gt;
-                &lt;p&gt;$!{object.getProperty('text').value}&lt;/p&gt;
+              &lt;div class="item-inner"&gt;
+                &lt;div&gt;
+                  &lt;img src="$!{imageUrl}" alt="$escapetool.xml($!{object.getProperty('title').value})"&gt;
+                  &lt;div class="carousel-caption"&gt;
+                    &lt;h3&gt;&lt;a #if("$!{linkURL}" != '')href="$!{linkURL}" #end&gt;$!{object.getProperty('title').value}&lt;/a&gt;&lt;/h3&gt;
+                    &lt;p&gt;$!{object.getProperty('text').value}&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           #end
@@ -891,6 +895,16 @@ colorPikerOn();</code>
     background-color: $carouselBGColor;
   }
 
+  #if("$!{carouselObj.getProperty('carouselWidth').value}" == '')
+    #set($carouselImageWidth = '100%')
+  #else 
+    #set($carouselImageWidth = ${carouselWidth})
+  #end
+  $carouselID .item-inner img {
+    max-width: ${carouselImageWidth};
+    max-height: ${carouselHeight};
+  }
+
   #foreach($slideObj in $slideObjects)
     #set($titleSize = $!{slideObj.getProperty('titleSize').value})
     #set($textSize = ${slideObj.getProperty('textSize').value})
@@ -910,6 +924,19 @@ colorPikerOn();</code>
     $carouselID .slide_${slideObj.number} .carousel-caption {
       color: ${textColor};
       font-size: $!{textSize};
+    }
+    $carouselID .item.slide_${slideObj.number} {
+      height: ${carouselHeight};
+    }
+    $carouselID .slide_${slideObj.number} .item-inner {
+      display: table;
+      width: 100%;
+    }
+    $carouselID .slide_${slideObj.number} .item-inner&gt;div {
+      display: table-cell;
+      vertical-align: middle;
+      height: ${carouselHeight};
+      text-align: center;
     }
   #end
 #end</code>
@@ -1158,11 +1185,6 @@ colorPikerOn();</code>
   height: 100%;
 }
 
-.xcarousel .carousel-inner .centerItem{
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .xcarousel .item &gt; img {
   margin-left: auto;
   margin-right: auto;
@@ -1188,11 +1210,11 @@ colorPikerOn();</code>
       <use>currentPage</use>
     </property>
   </object>
-    <object>
+  <object>
     <name>XCarouselCode.XCarouselSheet</name>
-    <number>4</number>
+    <number>5</number>
     <className>XWiki.StyleSheetExtension</className>
-    <guid>d26f20b9-9dc6-4251-bb38-cfc58f74e8c9</guid>
+    <guid>6082ee3f-a29e-4fdc-a30a-9b8964705515</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
       <customClass/>
@@ -1322,7 +1344,7 @@ colorPikerOn();</code>
       <parse>1</parse>
     </property>
     <property>
-      <use>currentPage</use>
+      <use>onDemand</use>
     </property>
   </object>
 </xwikidoc>
