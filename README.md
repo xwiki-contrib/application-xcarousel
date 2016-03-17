@@ -33,5 +33,5 @@ Create or delete as many slides as you want using "Add new slide/Delete Slide" b
 
 After the setup is done, you can insert the new carousel into any page using the display macro.
 
-ex: `{{display reference="XCarousel.Demo" type="document"/}}`
+ex: `{{xcarousel carousel='Demo'/}}`
 
