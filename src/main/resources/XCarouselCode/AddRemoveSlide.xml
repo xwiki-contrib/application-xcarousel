@@ -129,7 +129,7 @@ require(['jquery'], function ($) {
     var Target = $('.listOfSlides');
     var LauncherAdd = $('#GetNewSlide');
     var LauncherDel = $('.RemoveTarget');
-    var AddRemoveSlideUrl = new XWiki.Document('AddRemoveSlide','XCarouselCode').getURL('get');
+    var AddRemoveSlideUrl = new XWiki.Document('AddRemoveSlide','XCarouselCode').getURL('edit') + '?xpage=get';
     var carouselPageUrl = document.location.pathname;
     var documentName   = xm ? xm.document   : $('meta[name="document"]').attr('content');
     var form_token = xm ? xm.form_token : $('meta[name="form_token"]').attr('content');
@@ -155,7 +155,7 @@ require(['jquery'], function ($) {
       var UrlAddParams = { 'xpage': 'editobject', 'xaction' : 'addObject', 'className': 'XCarouselCode.XCarouselSectionClass' };
       $.post( carouselPageUrl, UrlAddParams ).done(function(){
         // the post is done, we can now call dipslayajaxcontent
-        $.get( '/xwiki/bin/inline/XCarouselCode/AddRemoveSlide?xpage=get', {'carouselName' : documentName}, function( response, status, xhr ) {
+        $.get( AddRemoveSlideUrl, {'carouselName' : documentName}, function( response, status, xhr ) {
           Target.append('&lt;li class="slideSection justAppended"&gt;' + response + '&lt;/li&gt;' );
         }, "html" ).done(function(){
           //after new section has been appended
