@@ -86,5 +86,8 @@ xcarousel.livetable.emptyvalue=-
 xcarousel.livetable.autoSliding=Auto-défilement
 xcarousel.livetable.interval=Interval
 xcarousel.livetable.carouselWidth=Largeur
-xcarousel.livetable.carouselHeight=Hauteur</content>
+xcarousel.livetable.carouselHeight=Hauteur
+
+# Miscellaneous keys
+xcarousel.image.imagealt=Aucune image n'a été définie pour cette diapositive</content>
 </xwikidoc>

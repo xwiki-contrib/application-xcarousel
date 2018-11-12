@@ -122,5 +122,8 @@ xcarousel.livetable.autoSliding=Auto-Sliding
 xcarousel.livetable.interval=Interval
 xcarousel.livetable.carouselWidth=Width
 xcarousel.livetable.carouselHeight=Height
-xcarousel.livetable.backgroundColor=Background Color</content>
+xcarousel.livetable.backgroundColor=Background Color
+
+# Miscellaneous keys
+xcarousel.image.imagealt=No image was set for this slide</content>
 </xwikidoc>
