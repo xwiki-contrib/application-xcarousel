@@ -60,6 +60,10 @@
       <organization>XWiki SAS</organization>
     </developer>
   </developers>
+  <issueManagement>
+    <system>jira</system>
+    <url>http://jira.xwiki.org/browse/XCAROUSEL</url>
+  </issueManagement>
   <distributionManagement>
     <repository>
       <id>xwiki-staging</id>
