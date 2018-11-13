@@ -32,7 +32,7 @@
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>application-xcarousel</artifactId>
   <name>XCarousel</name>
-  <version>1.2</version>
+  <version>1.3-SNAPSHOT</version>
   <packaging>xar</packaging>
   <description>Application that allows users to easily create carousels, while still offering a variety of settings, like auto-sliding(on/off), interval, width, height and background color for the carousel, and for each slide you can set the image and caption text with size, color, link.</description>
   <properties>
@@ -46,7 +46,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/application-xcarousel.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xcarousel.git</developerConnection>
     <url>https://github.com/xwiki-contrib/application-xcarousel.git</url>
-    <tag>application-xcarousel-1.2</tag>
+    <tag>HEAD</tag>
   </scm>
   <developers>
     <developer>
