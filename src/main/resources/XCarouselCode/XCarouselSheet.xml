@@ -46,7 +46,7 @@
 #set ($discard = $xwiki.ssx.use("XCarouselCode.XCarouselSheet", {'docVersion' : "$doc.getVersion()"}))
 #set ($discard = $xwiki.jsx.use("XCarouselCode.AddRemoveSlide"))
 #set ($discard = $xwiki.linkx.use($services.webjars.url('colpick/2.0.2/css/colpick.css'), {'rel': 'stylesheet'}))
-
+##
   #if ($context.display == 'edit')
     (% class="xform" %)
     (((
@@ -103,7 +103,7 @@
     ####
     ##End Display edit forms
     ####
-
+    ##
     ####
     ##Add new slide button via ajax
     ####    
@@ -124,13 +124,13 @@
     #set($interval = $!{carouselObject.getProperty('interval').value})
     #set($autoSliding = $!{carouselObject.getProperty('autoSliding').value})
     #set($carouselTitle = $doc.getDisplayTitle().replace(' ','_'))
-
+    ##
     #if($autoSliding == 0)
       #set($interval = 'false')
     #elseif("$!{interval}" == '')
       #set($interval = 5000)
     #end
-
+    ##
     {{html}}
       &lt;div id="carousel_${carouselTitle}" class="xcarousel carousel slide" data-ride="carousel" data-interval="$interval"&gt;
         ## Indicators
