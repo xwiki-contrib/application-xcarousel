@@ -74,7 +74,7 @@
     <className>XWiki.TranslationDocumentClass</className>
     <guid>7025262d-151c-4f6d-8a80-e35cb3da66b8</guid>
     <property>
-      <scope>ON_DEMAND</scope>
+      <scope>WIKI</scope>
     </property>
   </object>
   <content># Class fields
@@ -125,5 +125,8 @@ xcarousel.livetable.carouselHeight=Height
 xcarousel.livetable.backgroundColor=Background Color
 
 # Miscellaneous keys
-xcarousel.image.imagealt=No image was set for this slide</content>
+xcarousel.image.imagealt=No image was set for this slide
+
+# Template
+xcarousel.entry.name=XCarousel</content>
 </xwikidoc>

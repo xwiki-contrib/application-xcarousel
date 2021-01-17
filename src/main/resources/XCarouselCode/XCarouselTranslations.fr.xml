@@ -89,5 +89,8 @@ xcarousel.livetable.carouselWidth=Largeur
 xcarousel.livetable.carouselHeight=Hauteur
 
 # Miscellaneous keys
-xcarousel.image.imagealt=Aucune image n'a été définie pour cette diapositive</content>
+xcarousel.image.imagealt=Aucune image n'a été définie pour cette diapositive
+
+# Template
+xcarousel.entry.name=XCarousel</content>
 </xwikidoc>
