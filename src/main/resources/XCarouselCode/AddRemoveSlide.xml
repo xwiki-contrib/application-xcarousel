@@ -195,7 +195,6 @@ require(['jquery'], function ($) {
     function addSection(){
       var restUrl = $('#addObjRest').val()
       var UrlAddParams = { 'className': 'XCarouselCode.XCarouselSectionClass','form_token' : form_token };
-      console.log((carouselPageUrl));
       $.post( restUrl, UrlAddParams ).done(function(){
         // the post is done, we can now call dipslayajaxcontent
         $.get( AddRemoveSlideUrl, {'carouselName' : documentName}, function( response, status, xhr ) {
