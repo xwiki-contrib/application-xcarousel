@@ -930,7 +930,7 @@ colorPikerOn();</code>
       <cache>long</cache>
     </property>
     <property>
-      <code>#set($query = "from doc.object(XCarouselCode.XCarouselClass) as carousel where doc.space = 'XCarousel'")
+      <code>#set($query = "from doc.object(XCarouselCode.XCarouselClass) as carousel")
 #set($results = $services.query.xwql($query).execute())
 
 #foreach($result in $results)
