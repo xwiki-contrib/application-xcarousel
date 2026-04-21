@@ -3,7 +3,7 @@ XCarousel
 
 * Description: Application that allows users to easily create carousels, while still offering a variety of settings, like auto-sliding(on/off), interval, width, height and background color for the carousel, and for each slide you can set the image and caption text with size, color, link.
 
-* Project Lead: [Paul Panțiru](http://www.xwiki.org/xwiki/bin/view/XWiki/ppantiru)
+* Project Lead: [Mathieu Pace](http://www.xwiki.org/xwiki/bin/view/XWiki/mpace)
 
 * [Documentation & download](http://extensions.xwiki.org/xwiki/bin/view/Extension/XCarousel)
 

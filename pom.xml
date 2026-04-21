@@ -59,6 +59,11 @@
       <name>Yacine Kebir</name>
       <organization>XWiki SAS</organization>
     </developer>
+    <developer>
+      <id>mpace</id>
+      <name>Mathieu Pace</name>
+      <organization>XWiki SAS</organization>
+    </developer>
   </developers>
   <issueManagement>
     <system>jira</system>
